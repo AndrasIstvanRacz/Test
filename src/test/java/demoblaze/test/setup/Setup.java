@@ -12,6 +12,7 @@ public class Setup {
 
     @Before
     public void setWebDriver() {
+        WebDriverManager.chromedriver().clearPreferences();
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         /*ChromeOptions options = new ChromeOptions();
