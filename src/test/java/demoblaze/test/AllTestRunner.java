@@ -14,4 +14,5 @@ import org.junit.runner.RunWith;
         monochrome = true,
         strict = true)
 public class AllTestRunner {
+
 }
