@@ -1,34 +1,19 @@
 package demoblaze.test.login;
 
-
 import demoblaze.test.setup.Setup;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
 public class LoginStepDefinitions {
 
     WebDriverWait wait = new WebDriverWait(Setup.driver,40);
-
-    @Given("the site for login test")
-    public void openWebSite(){
-        WebDriverManager.chromedriver().setup();
-        Setup.driver = new ChromeDriver();
-        /*ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);*/
-        Setup.driver.manage().window().maximize();
-        Setup.driver.navigate().to("https://www.demoblaze.com");
-    }
 
     @And("the Login page")
     public void navigateToLogin(){
