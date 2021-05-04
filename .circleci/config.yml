@@ -6,11 +6,9 @@ orbs:
 jobs:
   test:
     docker:
-      - image: cimg/openjdk:13.0
+      - image: cimg/openjdk:14.0.2-browsers
     steps:
       - checkout
-      - run: java --version
-      - run: node --version
       - restore_cache:
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
       - run: mvn clean verify
