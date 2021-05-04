@@ -15,8 +15,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
         features = "src/test/resources/features/Cart.feature",
         glue = {"demoblaze.test.cart",
                 "demoblaze.test.setup"},
-        plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json",
-                "junit:target/cucumber-reports/Cucumber.xml",
+        plugin = { "pretty", "json:target/cucumber-reports/Cart.json",
+                "junit:target/cucumber-reports/Cart.xml",
                 "html:target/cucumber-reports" },
         monochrome = true,
         strict = true)

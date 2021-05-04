@@ -12,8 +12,8 @@ import io.cucumber.junit.CucumberOptions;
         features = "src/test/resources/features/NavigationBar.feature",
         glue = {"demoblaze.test.navigationbar",
                 "demoblaze.test.setup"},
-        plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json",
-                "junit:target/cucumber-reports/Cucumber.xml",
+        plugin = { "pretty", "json:target/cucumber-reports/NavBar.json",
+                "junit:target/cucumber-reports/NavBar.xml",
                 "html:target/cucumber-reports" },
         monochrome = true,
         strict = true)

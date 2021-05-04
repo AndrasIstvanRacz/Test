@@ -15,8 +15,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
         features = "src/test/resources/features/Login.feature",
         glue = {"demoblaze.test.login",
                 "demoblaze.test.setup"},
-        plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json",
-                "junit:target/cucumber-reports/Cucumber.xml",
+        plugin = { "pretty", "json:target/cucumber-reports/Login.json",
+                "junit:target/cucumber-reports/Login.xml",
                 "html:target/cucumber-reports" },
         monochrome = true,
         strict = true)
