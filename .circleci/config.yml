@@ -6,7 +6,7 @@ orbs:
 jobs:
   test:
     docker:
-      - image: cimg/openjdk:13.0-browser
+      - image: cimg/openjdk:14.0.2-browsers
     steps:
       - checkout
       - restore_cache:
