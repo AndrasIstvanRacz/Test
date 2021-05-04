@@ -2,6 +2,26 @@ version: 2.1
 
 orbs:
   maven: circleci/maven@1.1
+  
+jobs:
+  test:
+    docker:
+      - image: cimg/openjdk:13.0
+    steps:
+      - checkout
+      - run: java --version
+      - run: node --version
+      - restore_cache:
+          key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+      - run: mvn clean verify
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+      - store_test_results:
+          path: target/cucumber-reports
+      - store_artifacts:
+          path: target/generated-report
 
 workflows:
   maven_test:
