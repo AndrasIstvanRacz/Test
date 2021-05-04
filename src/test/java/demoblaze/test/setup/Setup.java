@@ -23,6 +23,8 @@ public class Setup {
 
     @After
     public void closeWebDriver(){
-        driver.quit();
+        if(driver != null){
+            driver.quit();
+        }
     }
 }
