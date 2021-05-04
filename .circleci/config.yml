@@ -23,7 +23,7 @@ jobs:
           path: target/cucumber-reports
       - store_artifacts:
           path: target/generated-report
-          
+
 workflows:
   maven_test:
     jobs:
